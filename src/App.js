@@ -1,10 +1,22 @@
 import logo from './logo.svg';
+import FooterComp from './Components/Footer/footer';
 import './App.css';
+import HomeBG from './Components/HomeBG/homeBg';
+import MainCard from './Components/MainCard/mainCard';
+import MainView from './Views/MainView/mainView';
+import SignUpAdmin from './Components/SignUp/signAdmin';
+import SignUpTenant from './Components/SignUp/signTenant';
+import {useState} from 'react';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" >
+      <FooterComp />
+      {/* <HomeBG /> */}
+      <MainCard />
+      {/* <MainView /> */}
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +29,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <SignUpAdmin />
+      <SignUpTenant />
     </div>
   );
 }

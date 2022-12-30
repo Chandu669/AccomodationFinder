@@ -1,0 +1,102 @@
+.signup-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    padding: 15px;
+    width: 550px;
+    border: 4px solid rgba(93, 233, 0, 0.8);
+
+     .main-title{
+        font-size: 22px;
+        text-align: center;
+        color: white;
+        margin: 10px 0 5px 0;
+     }
+
+     .sub-title{
+        text-align: center;
+        color: white;
+        margin: 0 0 15px 0;
+     }
+
+     .req-text{
+        text-align: right;
+        color: rgb(194, 194, 194);
+        width: 90%;
+        margin: 12px 5px 0 0;
+     }
+
+     .reset-div{
+        width: 90%;
+        text-align:left;
+        margin: 12px 0 0 0;
+
+        .reset-link{
+            color: rgb(200, 250, 200);
+
+        &:hover{
+            color:aliceblue;
+        }
+        }
+     }
+
+     .signup-btn{
+        width: 90%;
+        height: 40px;
+        border: 2px solid #42e900;
+        border-radius: 5px;
+        font-weight: 600;
+        color: #42e900;
+        margin: 18px 0 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #418519;
+            color: white;
+            border: none;
+        }
+     }
+
+     .final-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: space-between;
+        width: 90%;
+        margin: 0px 0 12px 0;
+
+        .question{
+            color:white;
+            margin: 0;
+            padding: o;
+        }
+
+        .log-link{
+            color: rgb(200, 250, 200);
+            margin-left: 5px;
+
+            &:hover{
+                color:aliceblue;
+            }
+        }
+     }
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    .input-title{
+        color: white;
+        text-align: left;
+        padding: 0;
+        margin: 12px 0 3px 0 ;
+    }
+}
