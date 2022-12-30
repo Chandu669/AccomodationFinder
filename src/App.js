@@ -1,20 +1,26 @@
-import logo from './logo.svg';
 import FooterComp from './Components/Footer/footer';
+import { Route, Routes } from "react-router-dom";
 import './App.css';
 import HomeBG from './Components/HomeBG/homeBg';
 import MainCard from './Components/MainCard/mainCard';
 import MainView from './Views/MainView/mainView';
 import SignUpAdmin from './Components/SignUp/signAdmin';
 import SignUpTenant from './Components/SignUp/signTenant';
-import {useState} from 'react';
+// import {useState} from 'react';
 
 function App() {
 
   return (
     <div className="App" >
       <FooterComp />
+      <Routes>
+        <Route path="/" element={<HomeBG />} />
+        <Route path="/rooms" element={<MainView />} />
+        <Route path="/signup" element={<SignUpAdmin />} />
+        <Route path="/main" element={<MainCard />} />
+      </Routes>
       {/* <HomeBG /> */}
-      <MainCard />
+      {/* <MainCard /> */}
       {/* <MainView /> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -30,8 +36,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <SignUpAdmin />
-      <SignUpTenant />
+      {/* <SignUpAdmin />
+      <SignUpTenant /> */}
     </div>
   );
 }
