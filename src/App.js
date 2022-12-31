@@ -4,7 +4,7 @@ import './App.css';
 import HomeBG from './Components/HomeBG/homeBg';
 import MainCard from './Components/MainCard/mainCard';
 import MainView from './Views/MainView/mainView';
-import SignUpView from './Views/SignUpView/signUpView';
+import SignUpView from './Views/SignUpView/signView';
 import SignUpAdmin from './Components/SignUp/signAdmin';
 import SignUpTenant from './Components/SignUp/signTenant';
 // import {useState} from 'react';
