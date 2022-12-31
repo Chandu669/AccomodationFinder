@@ -1,4 +1,4 @@
-import HeaderComp from './Components/Header/header';
+import FooterComp from './Components/Footer/footer';
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import HomeBG from './Components/HomeBG/homeBg';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App" >
-      <HeaderComp />
+      <FooterComp />
       <Routes>
         <Route path="/" element={<HomeBG />} />
         <Route path="/rooms" element={<MainView />} />
