@@ -5,6 +5,7 @@ import "./mainView.scss";
 
 //Component Imports
 import OverviewCard from "../../Components/OverviewCard/overviewCard";
+import FilterComp from "../../Components/Filter/filter";
 
 import { addData } from "../../Data/adds";
 
@@ -13,6 +14,7 @@ import { addData } from "../../Data/adds";
 const MainView = (props) => {
   return (
     <div className="main-view">
+      <FilterComp />
       <div className="container">
         <div className="row">
           {addData.map((advertisement, i) => {
