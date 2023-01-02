@@ -1,0 +1,48 @@
+.comment-tile {
+  display: flex;
+  flex-direction: column;
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .commenter {
+      text-align: right;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      color: #505050;
+    }
+
+    .comment {
+      margin-left: 20px;
+      text-align: justify;
+    }
+
+    .date {
+      color: #aaaaaa;
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  .divider {
+    background-color: #474747;
+    height: 1px;
+    border: 1px soild #474747;
+  }
+
+  .title-wrapper {
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        text-align:left;
+    }
+  }
+}

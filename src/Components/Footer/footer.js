@@ -10,19 +10,21 @@ import './footer.css';
 
 const FooterComp = (props) => {
 
+
+
 return(
     <header id="header" class="fixed-top ">
     <div className="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">USJ</a></h1>
+      <h1 class="logo"><a href="https://www.sjp.ac.lk/">USJ</a></h1>
       {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-      {/* <a href="index.html" class="logo"><img src="assets/img/mavos_logo.svg" alt="" class="img-fluid" /></a> */}
+      {/* <a href="https://www.sjp.ac.lk/" class="logo"><img src={require("../../Assets/Images/SJP.png")} alt="" class="img-fluid" /></a> */}
 
       <nav id="navbar" className="navbar">
         <ul>
-          <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a className="nav-link scrollto active" href="/">Home</a></li>
           <li><a className="nav-link scrollto" href="#about">Houses</a></li>
-          <li><a className="nav-link scrollto" href="#services">Studentrooms</a></li>
+          <li><a className="nav-link scrollto" href="/rooms">Studentrooms</a></li>
           <li><a className="nav-link scrollto " href="#portfolio">How it works?</a></li>
           <li><a className="nav-link scrollto" href="#team">Team</a></li>
           <li><a className="nav-link scrollto" href="#partners">Partners</a></li>
@@ -44,7 +46,7 @@ return(
             </ul>
           </li>
           <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a className="getstarted scrollto" href="#about">LogIn</a></li>
+          <li><a className="getstarted scrollto" href="/signup">LogIn</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

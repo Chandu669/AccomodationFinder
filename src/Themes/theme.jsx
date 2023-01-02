@@ -4,10 +4,10 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
     palette:{
         primary: {
-            main: 'rgba(97, 191, 4, 1.0)',
+            main: 'rgba(167, 122, 1, 1.0)',
             light: '#aaeeaa',
             dark: '#aaffaa',
-            mainChannel: 'rgba(97, 131, 4, 1.0)',
+            mainChannel: 'rgba(167, 122, 1, 1.0)',
         },
         secondary: {
             main: '#dddddd',
@@ -17,7 +17,7 @@ export const theme = createTheme({
             selectedOpacity: 0.5,
             focusOpacity: 0.2,
             hoverOpacity: 0.1,
-            hover: 'rgba(97, 191, 4, 0.1)'
+            hover: 'rgba(167, 122, 1, 0.1)'
         }
     }
 });

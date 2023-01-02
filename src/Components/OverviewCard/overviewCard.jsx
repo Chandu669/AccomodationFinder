@@ -111,7 +111,9 @@ const OverviewCard = (props) => {
   };
 
   return (
-    <div className="overview-card">
+    <div className="overview-card" onClick={() => {
+      props.onClick(data.id)
+    }}>
       <div className="img-box">
         <img
           src={require("" + data.img)}

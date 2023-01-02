@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeBG />} />
         <Route path="/rooms" element={<MainView />} />
+        <Route path="/rooms/:addID" element={<MainCard />} />
         <Route path="/signup" element={<SignUpView />} />
         <Route path="/main" element={<MainCard />} />
       </Routes>

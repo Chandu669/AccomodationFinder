@@ -2,6 +2,7 @@
 import "./mainView.scss";
 
 //React Imports
+import { useNavigate } from "react-router-dom";
 
 //Component Imports
 import OverviewCard from "../../Components/OverviewCard/overviewCard";
@@ -12,6 +13,13 @@ import { addData } from "../../Data/adds";
 //Assets
 
 const MainView = (props) => {
+
+  const navigate = useNavigate();
+
+  const clickHandler = (selectedID) => {
+    navigate(selectedID);
+  }
+
   return (
     <div className="main-view">
       <FilterComp />
@@ -22,6 +30,7 @@ const MainView = (props) => {
               <div className="col-sm-12 col-md-6 col-lg-4" key={"miniAdd-"+i}>
                 <OverviewCard
                   data = {advertisement}
+                  onClick = {clickHandler}
                 />
               </div>
             );

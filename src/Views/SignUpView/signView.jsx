@@ -5,6 +5,7 @@ import "./signView.scss";
 
 //Component Imports
 import SignUpAdmin from "../../Components/SignUp/signAdmin";
+import SignUpTenant from "../../Components/SignUp/signTenant";
 
 //Assets
 

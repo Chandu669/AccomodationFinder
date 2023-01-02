@@ -55,9 +55,6 @@ const FilterComp = (props) => {
               >
                 <InputLabel
                   id="demo-select-small"
-                  sx={{
-                    backgroundColor: "rgb(97, 131, 4)",
-                  }}
                 >
                   For
                 </InputLabel>

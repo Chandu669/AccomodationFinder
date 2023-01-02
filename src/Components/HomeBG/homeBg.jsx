@@ -2,6 +2,7 @@
 import "./homeBg.css";
 
 //React Imports
+import { useNavigate } from "react-router-dom";
 
 //Component Imports
 
@@ -10,6 +11,9 @@ import  { ReactComponent as HouseIcon } from "../../Assets/svgs/house.svg";
 import  { ReactComponent as StudentIcon } from "../../Assets/svgs/cap-2.svg";
 
 const HomeBG = (props) => {
+
+  const navigate = useNavigate();
+
   return (
     <section id="hero">
       <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
@@ -22,13 +26,13 @@ const HomeBG = (props) => {
         <p className="question">What are you looking for?</p>
           <div className="row-sec">
             <div className="div-sec">
-              <div className="icon-div">
+              <div className="icon-div" onClick={() => {navigate("/houses")}}>
                 <HouseIcon className="svg-icon1"/>
               </div>
               <h3>Houses</h3>
             </div>
             <div className="div-sec">
-              <div className="icon-div">
+              <div className="icon-div" onClick={() => {navigate("/rooms")}}>
                 <StudentIcon className="svg-icon2"/>
               </div>
               <h3>Studentrooms</h3>
