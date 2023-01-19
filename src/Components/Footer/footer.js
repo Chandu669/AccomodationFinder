@@ -4,6 +4,7 @@ import './footer.css';
 //React Imports
 
 //Component Imports
+import MenuItem from './MenuItem';
 
 //Assets
 
@@ -22,9 +23,10 @@ return(
 
       <nav id="navbar" className="navbar">
         <ul>
-          <li><a className="nav-link scrollto active" href="/">Home</a></li>
+          <MenuItem link="/" title="Home" selected={false} />
+          {/* <li><a className="nav-link scrollto active" href="/">Home</a></li> */}
           <li><a className="nav-link scrollto" href="#about">Houses</a></li>
-          <li><a className="nav-link scrollto" href="/rooms">Studentrooms</a></li>
+          <MenuItem link="/rooms" title="Studentrooms" selected={false} />
           <li><a className="nav-link scrollto " href="#portfolio">How it works?</a></li>
           <li><a className="nav-link scrollto" href="#team">Team</a></li>
           <li><a className="nav-link scrollto" href="#partners">Partners</a></li>

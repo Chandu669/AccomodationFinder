@@ -2,6 +2,7 @@
 import "./signAdmin.scss";
 
 //React Imports
+import { Link } from "react-router-dom";
 
 //Component Imports
 
@@ -75,9 +76,9 @@ const SignUpAdmin = (props) => {
       <div className="signup-btn">Sign Up</div>
       <div className="final-section">
         <p className="question">Already have an account?</p>
-        <a href="#" className="log-link">
+        <Link to={"/login"} className="log-link">
           Log In
-        </a>
+        </Link>
       </div>
     </div>
   );

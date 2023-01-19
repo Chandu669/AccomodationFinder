@@ -1,4 +1,4 @@
-.signup-wrapper{
+.login-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@
         margin: 12px 0 0 0;
 
         .reset-link{
-            color: rgba(234, 172, 0, 0.9);
+            color: rgb(200, 250, 200);
 
         &:hover{
             color:aliceblue;
@@ -51,7 +51,7 @@
         border-radius: 5px;
         font-weight: 600;
         color: #42e900;
-        margin: 18px 0 10px 0;
+        margin: 50px 0 10px 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -68,7 +68,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        // justify-content: space-between;
         width: 90%;
         margin: 0px 0 12px 0;
 
@@ -88,7 +87,6 @@
         }
      }
 }
-
 .input-section{
     display: flex;
     flex-direction: column;

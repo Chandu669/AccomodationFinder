@@ -89,7 +89,9 @@ const MainCard = (props) => {
                 setSelectedImage={setSelectedImageIndex}
               />
             </div>
-            <div className="map-comp"><SmallMap /></div>
+            <div className="map-comp">
+              {/* <SmallMap /> */}
+              </div>
           </div>
 
           <div className="right-section">

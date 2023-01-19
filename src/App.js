@@ -5,8 +5,9 @@ import HomeBG from './Components/HomeBG/homeBg';
 import MainCard from './Components/MainCard/mainCard';
 import MainView from './Views/MainView/mainView';
 import SignUpView from './Views/SignUpView/signView';
-import SignUpAdmin from './Components/SignUp/signAdmin';
-import SignUpTenant from './Components/SignUp/signTenant';
+import LogInView from './Views/LogInView/loginView';
+import SignAdminView from './Views/SignUpView/signAdminView';
+import SignTenantView from './Views/SignUpView/signTenantView';
 // import {useState} from 'react';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         <Route path="/rooms" element={<MainView />} />
         <Route path="/rooms/:addID" element={<MainCard />} />
         <Route path="/signup" element={<SignUpView />} />
+        <Route path="/signup/admin" element={<SignAdminView />} />
+        <Route path="/signup/tenant" element={<SignTenantView />} />
+        <Route path="/login" element={<LogInView />} />
         <Route path="/main" element={<MainCard />} />
       </Routes>
       {/* <HomeBG /> */}
