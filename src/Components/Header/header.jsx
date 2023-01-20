@@ -1,8 +1,9 @@
 //CSS Imports
-import './footer.css';
+import './header.css';
 
 //React Imports
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 //Component Imports
 import MenuItem from './MenuItem';
@@ -10,9 +11,28 @@ import MenuItem from './MenuItem';
 //Assets
 
 
-const FooterComp = (props) => {
+const HeaderComp = (props) => {
 
+const BoxLink = (props) => {
 
+  const [selected, setSelected] = useState(false);
+
+  const pathName = useLocation().pathname;
+  const pathsArray = pathName.split("/");
+  const firstPath = "/" + pathsArray[1];
+
+  useEffect(() => {
+    setSelected(firstPath === props.link);
+}, [pathName, props.link]);
+
+  return(
+    <li>
+        <Link to={props.link} className={`getstarted ${selected ? "activeBox": ""}`}>
+            {props.title}
+        </Link>
+      </li>
+  );
+}
 
 return(
     <header id="header" class="fixed-top ">
@@ -49,7 +69,8 @@ return(
             </ul>
           </li>
           <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><Link to={"/signup"} className='getstarted'>LogIn</Link></li>
+          <BoxLink link={"/signup"} title="SignUp" selected={false} />
+          <BoxLink link={"/login"} title="LogIn" selected={false} />
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -59,4 +80,4 @@ return(
 );
 };
 
-export default FooterComp;
+export default HeaderComp;

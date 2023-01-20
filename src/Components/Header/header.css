@@ -111,15 +111,23 @@
   .navbar .getstarted,
   .navbar .getstarted:focus {
     padding: 8px 25px;
-    margin-left: 30px;
+    margin-left: 10px;
     border-radius: 4px;
     color: #fff;
     border: 2px solid #fff;
+    text-decoration: none;
   }
   
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
-    color: #fff;
+    color: #121212;
+    background: #ffac00;
+    border-color: #eaac00;
+  }
+
+  .navbar .activeBox,
+  .navbar .activeBox:focus{
+    color: #121212;
     background: #ffac00;
     border-color: #eaac00;
   }
@@ -188,6 +196,8 @@
     left: 100%;
     visibility: visible;
   }
+
+
   
   @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
