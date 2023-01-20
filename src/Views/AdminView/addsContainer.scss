@@ -1,0 +1,33 @@
+.adds-container{
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-top: 20px;
+    padding: 25px;
+
+    .topic-section{
+        position: relative;
+        height: 30px;
+
+        .topic{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width:fit-content;
+            background-color: #f1f1f1;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-right: 10px;
+            z-index: 2;
+            color: #505050;
+        }
+
+        .line{
+            position: absolute;
+            left: 0;
+            top: -5px;
+            height: 2px;
+            background-color: #505050;
+            width: 100%;
+        }
+    }
+}
