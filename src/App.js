@@ -1,30 +1,33 @@
-import FooterComp from './Components/Footer/footer';
+import FooterComp from "./Components/Footer/footer";
 import { Route, Routes } from "react-router-dom";
-import './App.css';
-import HomeBG from './Components/HomeBG/homeBg';
-import MainCard from './Components/MainCard/mainCard';
-import MainView from './Views/MainView/mainView';
-import SignUpView from './Views/SignUpView/signView';
-import LogInView from './Views/LogInView/loginView';
-import SignAdminView from './Views/SignUpView/signAdminView';
-import SignTenantView from './Views/SignUpView/signTenantView';
+import "./App.css";
+import HomeBG from "./Components/HomeBG/homeBg";
+import MainCard from "./Components/MainCard/mainCard";
+import MainView from "./Views/MainView/mainView";
+import SignUpView from "./Views/SignUpView/signView";
+import LogInView from "./Views/LogInView/loginView";
+import SignAdminView from "./Views/SignUpView/signAdminView";
+import SignTenantView from "./Views/SignUpView/signTenantView";
 // import {useState} from 'react';
 
 function App() {
-
   return (
-    <div className="App" >
-      <FooterComp />
-      <Routes>
-        <Route path="/" element={<HomeBG />} />
-        <Route path="/rooms" element={<MainView />} />
-        <Route path="/rooms/:addID" element={<MainCard />} />
-        <Route path="/signup" element={<SignUpView />} />
-        <Route path="/signup/admin" element={<SignAdminView />} />
-        <Route path="/signup/tenant" element={<SignTenantView />} />
-        <Route path="/login" element={<LogInView />} />
-        <Route path="/main" element={<MainCard />} />
-      </Routes>
+    <div className="App">
+      <div className="header-container">
+        <FooterComp />
+      </div>
+      <div className="main-container">
+        <Routes>
+          <Route path="/" element={<HomeBG />} />
+          <Route path="/rooms" element={<MainView />} />
+          <Route path="/rooms/:addID" element={<MainCard />} />
+          <Route path="/signup" element={<SignUpView />} />
+          <Route path="/signup/admin" element={<SignAdminView />} />
+          <Route path="/signup/tenant" element={<SignTenantView />} />
+          <Route path="/login" element={<LogInView />} />
+          <Route path="/main" element={<MainCard />} />
+        </Routes>
+      </div>
       {/* <HomeBG /> */}
       {/* <MainCard /> */}
       {/* <MainView /> */}

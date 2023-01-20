@@ -2,6 +2,7 @@
 import './footer.css';
 
 //React Imports
+import { Link } from 'react-router-dom';
 
 //Component Imports
 import MenuItem from './MenuItem';
@@ -48,7 +49,7 @@ return(
             </ul>
           </li>
           <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a className="getstarted scrollto" href="/signup">LogIn</a></li>
+          <li><Link to={"/signup"} className='getstarted'>LogIn</Link></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

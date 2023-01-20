@@ -1,11 +1,25 @@
 .App {
   text-align: center;
   /* padding-top: 110px; */
+  display:flex;
+  flex-direction: column;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.header-container{
+  overflow: hidden;
+}
+
+.main-container{
+  overflow-y: auto;
+  height: calc(100vh - 85px);
+  margin: 85px 0 0 0;
+  position: relative;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

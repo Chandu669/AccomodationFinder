@@ -20,3 +20,17 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba( 80, 80, 80, 0.8);
+  border-radius: 20px;
+}
