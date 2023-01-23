@@ -5,6 +5,7 @@ import "./addsContainer.scss";
 
 //Component Imports
 import OverviewCard from "../../Components/OverviewCard/overviewCard";
+import { ReactComponent as AddIcon } from "../../Assets/svgs/plus-icon.svg";
 
 import { addData } from "../../Data/adds";
 
@@ -22,8 +23,16 @@ const AddsContainer = (props) => {
           <div className="col-6">
             <OverviewCard data={addData[1]} onClick={() => {}} />
           </div>
-          <div className="col-6">
+          {/* <div className="col-6">
             <OverviewCard data={addData[2]} onClick={() => {}} />
+          </div> */}
+          <div className="col-6">
+            <div className="new-add">
+              <div className="add-icon">
+                <AddIcon className="icon-svg" />
+              </div>
+              <p className="instruction">Create a new Add</p>
+            </div>
           </div>
         </div>
       </div>

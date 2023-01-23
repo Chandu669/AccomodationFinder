@@ -3,7 +3,7 @@ import "./login.scss";
 
 //React Imports
 import { themeLogIn } from "../../Themes/theme";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 //Component Imports
 import * as React from "react";
@@ -19,9 +19,20 @@ import { ThemeProvider } from "@mui/material";
 const LogIN = (props) => {
   const [accountType, setAccountType] = React.useState("Tenant");
 
+  const navigate = useNavigate();
+  
   const handleChange = (event) => {
     setAccountType(event.target.value);
   };
+
+  const logInHandler = (event) => {
+    if(accountType === "Tenant"){
+      navigate("/");
+    }else if(accountType === "Admin"){
+      navigate("/admin");
+    }
+    props.setUser(true);
+  }
 
   const InputSection = (props) => {
     return (
@@ -71,7 +82,7 @@ const LogIN = (props) => {
         id={"pwd"}
         tip={"Enter your Password here"}
       />
-      <div className="signup-btn">Log In</div>
+      <div className="signup-btn" onClick={logInHandler}>Log In</div>
       <div className="final-section">
         <p className="question">Haven't an account?</p>
         <Link to={"/signup"} className="log-link">

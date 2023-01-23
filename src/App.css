@@ -16,6 +16,7 @@
 
 .main-container{
   overflow-y: auto;
+  overflow-x: hidden;
   height: calc(100vh - 85px);
   margin: 85px 0 0 0;
   position: relative;

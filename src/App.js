@@ -1,5 +1,6 @@
 import HeaderComp from "./Components/Header/header";
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 import AdminView from "./Views/AdminView/adminView";
 import HomeBG from "./Components/HomeBG/homeBg";
@@ -14,10 +15,13 @@ import ProfileCard from "./Components/ProfileCard/profileCard";
 // import {useState} from 'react';
 
 function App() {
+
+  const [userVar, setUserVar] = useState(false);
+
   return (
     <div className="App">
       <div className="header-container">
-        <HeaderComp />
+        <HeaderComp user={userVar} setUser={setUserVar} />
       </div>
       <div className="main-container">
         <Routes>
@@ -27,8 +31,8 @@ function App() {
           <Route path="/signup" element={<SignUpView />} />
           <Route path="/signup/admin" element={<SignAdminView />} />
           <Route path="/signup/tenant" element={<SignTenantView />} />
-          <Route path="/login" element={<LogInView />} />
-          <Route path="/main" element={<AdminView />} />
+          <Route path="/login" element={<LogInView setUser={setUserVar}/>} />
+          <Route path="/admin" element={<AdminView />} />
         </Routes>
       </div>
       {/* <HomeBG /> */}

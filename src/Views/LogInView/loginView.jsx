@@ -12,7 +12,7 @@ const LogInView = (props) => {
   return (
     <div className="login-view">
       <div className="wrapper">
-        <LogIN />
+        <LogIN setUser={props.setUser}/>
       </div>
     </div>
   );
