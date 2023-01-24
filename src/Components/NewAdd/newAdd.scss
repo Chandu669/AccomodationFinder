@@ -1,0 +1,60 @@
+.map-container {
+  height: 400px;
+  width: 600px;
+  background-color: chocolate;
+  border: 2px solid #dadbdd;
+  border-radius: 5px;
+}
+
+.location-icon {
+  height: 30px;
+  width: 30px;
+}
+
+
+
+.new-add {
+    width: 800px;
+    padding: 35px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    margin: 15px;
+
+    .prefix-text{
+        margin: 0 5px 0 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .suffix-text{
+        margin: 0 0 0 5px;
+        display: flex;
+        align-items: center;
+    }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 20px;
+
+    .title {
+      margin: 0;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 8px;
+
+      .tip {
+        color: #505050;
+        font-size: 14px;
+      }
+    }
+
+    .children {
+      margin-left: 8%;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

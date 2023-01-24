@@ -2,6 +2,7 @@
 import "./addsContainer.scss";
 
 //React Imports
+import { useNavigate } from "react-router-dom"; 
 
 //Component Imports
 import OverviewCard from "../../Components/OverviewCard/overviewCard";
@@ -12,6 +13,9 @@ import { addData } from "../../Data/adds";
 //Assets
 
 const AddsContainer = (props) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="adds-container">
       <div className="topic-section">
@@ -27,8 +31,8 @@ const AddsContainer = (props) => {
             <OverviewCard data={addData[2]} onClick={() => {}} />
           </div> */}
           <div className="col-6">
-            <div className="new-add">
-              <div className="add-icon">
+            <div className="new-add-link-div">
+              <div className="add-icon" onClick={() => navigate("/admin/new-add")}>
                 <AddIcon className="icon-svg" />
               </div>
               <p className="instruction">Create a new Add</p>

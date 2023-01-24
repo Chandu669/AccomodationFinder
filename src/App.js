@@ -10,8 +10,10 @@ import SignUpView from "./Views/SignUpView/signView";
 import LogInView from "./Views/LogInView/loginView";
 import SignAdminView from "./Views/SignUpView/signAdminView";
 import SignTenantView from "./Views/SignUpView/signTenantView";
+import NewAddView from "./Views/NewAddView/newAddView";
 
 import ProfileCard from "./Components/ProfileCard/profileCard";
+import NewAdd from "./Components/NewAdd/newAdd";
 // import {useState} from 'react';
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
           <Route path="/signup/tenant" element={<SignTenantView />} />
           <Route path="/login" element={<LogInView setUser={setUserVar}/>} />
           <Route path="/admin" element={<AdminView />} />
+          <Route path="/admin/new-add" element={<NewAddView />} />
         </Routes>
       </div>
       {/* <HomeBG /> */}
