@@ -1,6 +1,6 @@
 .img-viewer {
   // box-sizing: content-box;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
@@ -15,7 +15,7 @@
   overflow-x: hidden;
   padding: 2vh;
   user-select: none;
-  z-index: 999;
+  z-index: 1100;
 
   .tb-wrapper {
     position: absolute;
