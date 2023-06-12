@@ -3,54 +3,60 @@ import "./login.scss";
 
 //React Imports
 import { themeLogIn } from "../../Themes/theme";
-import { Link,useNavigate } from "react-router-dom";
 
 //Component Imports
-import * as React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Box from "@mui/material/Box";
+import { Link, useNavigate } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { ThemeProvider } from "@mui/material";
-
+import { UserUpdateData, setToken } from "../../Services/AuthService";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 //Assets
 
 const LogIN = (props) => {
+  const token = setToken();
+  const initialState = { email: "", password: "" };
+  const [userData, setUserData] = useState({ email: "", password: "" });
   const [accountType, setAccountType] = React.useState("Tenant");
-
   const navigate = useNavigate();
-  
+
   const handleChange = (event) => {
     setAccountType(event.target.value);
   };
 
-  const logInHandler = (event) => {
-    if(accountType === "Tenant"){
-      navigate("/");
-    }else if(accountType === "Admin"){
-      navigate("/admin");
+  // const logInHandler = (event) => {
+  //   if(accountType === "Tenant"){
+  //     navigate("/");
+  //   }else if(accountType === "Admin"){
+  //     navigate("/admin");
+  //   }
+  //   props.setUser(true);
+  // }
+
+
+  const submitLogin = () => {
+    if (!userData.email) {
+      toast.error("Please enter user email!", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        className: "foo-bar",
+      });
+      return;
     }
-    props.setUser(true);
-  }
-
-  const InputSection = (props) => {
-    return (
-      <div className="input-section">
-        <p className="input-title">{props.title}</p>
-        <input type="text" id={props.id} placeholder={props.tip} />
-      </div>
-    );
+    if (!userData.password) {
+      toast.error("Please enter user password!", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        className: "foo-bar",
+      });
+      return;
+    }
   };
 
-  const PWDInputSection = (props) => {
-    return (
-      <div className="input-section">
-        <p className="input-title">{props.title}</p>
-        <input type="password" id={props.id} placeholder={props.tip} />
-      </div>
-    );
-  };
 
   return (
     <div className="login-wrapper">
@@ -72,17 +78,16 @@ const LogIN = (props) => {
           </FormControl>
         </Box>
       </ThemeProvider>
-      <InputSection
-        title={"Username"}
-        id={"u-name"}
-        tip={"Enter your Username here"}
-      />
-      <PWDInputSection
-        title={"Password"}
-        id={"pwd"}
-        tip={"Enter your Password here"}
-      />
-      <div className="signup-btn" onClick={logInHandler}>Log In</div>
+      <div className="input-section">
+        <p className="input-title">{props.title}</p>
+        <input type="email" id={props.id} placeholder={props.tip} value={userData?.email} onChange={(e) => setUserData({ ...userData, email: e.target.value })} />
+      </div>
+
+      <div className="input-section">
+        <p className="input-title">{props.title}</p>
+        <input type="password" id={props.id} placeholder={props.tip} value={userData?.password} onChange={(e) => setUserData({ ...userData, password: e.target.value })} />
+      </div>
+      <div className="signup-btn" onClick={submitLogin}>Log In</div>
       <div className="final-section">
         <p className="question">Haven't an account?</p>
         <Link to={"/signup"} className="log-link">
