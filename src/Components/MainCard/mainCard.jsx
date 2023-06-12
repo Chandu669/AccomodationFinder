@@ -90,7 +90,7 @@ const MainCard = (props) => {
               />
             </div>
             <div className="map-comp">
-              {/* <SmallMap /> */}
+              <SmallMap />
               </div>
           </div>
 
