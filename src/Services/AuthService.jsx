@@ -46,4 +46,5 @@ export const getToken = async () => {
 
 export const setToken = async (token) => { 
   localStorage.setItem(TOKEN_KEY, token);
+  // changes
 }
